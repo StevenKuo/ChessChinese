@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C32952C1B38FF7A00A020CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32952B1B38FF7A00A020CB /* AppDelegate.swift */; };
+		9C32952E1B38FF7A00A020CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32952D1B38FF7A00A020CB /* ViewController.swift */; };
+		9C3295311B38FF7A00A020CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C32952F1B38FF7A00A020CB /* Main.storyboard */; };
+		9C3295331B38FF7A00A020CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3295321B38FF7A00A020CB /* Assets.xcassets */; };
+		9C3295361B38FF7A00A020CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3295341B38FF7A00A020CB /* LaunchScreen.storyboard */; };
+		9C32953E1B38FFC400A020CB /* SKChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32953D1B38FFC400A020CB /* SKChessBoard.swift */; };
+		9C3295401B390FB700A020CB /* SKChessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32953F1B390FB700A020CB /* SKChessManager.swift */; };
+		9C3295421B393DCE00A020CB /* SKChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3295411B393DCE00A020CB /* SKChessView.swift */; };
+		9C3295441B3955F200A020CB /* SKCoverChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3295431B3955F200A020CB /* SKCoverChessView.swift */; };
+		9C497D0B1B3A9E4E00A2570B /* SKEmptyChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C497D0A1B3A9E4E00A2570B /* SKEmptyChessView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C3295281B38FF7A00A020CB /* ChessChinese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessChinese.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C32952B1B38FF7A00A020CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C32952D1B38FF7A00A020CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C3295301B38FF7A00A020CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C3295321B38FF7A00A020CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C3295351B38FF7A00A020CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C3295371B38FF7A00A020CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C32953D1B38FFC400A020CB /* SKChessBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKChessBoard.swift; sourceTree = "<group>"; };
+		9C32953F1B390FB700A020CB /* SKChessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKChessManager.swift; sourceTree = "<group>"; };
+		9C3295411B393DCE00A020CB /* SKChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKChessView.swift; sourceTree = "<group>"; };
+		9C3295431B3955F200A020CB /* SKCoverChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCoverChessView.swift; sourceTree = "<group>"; };
+		9C497D0A1B3A9E4E00A2570B /* SKEmptyChessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmptyChessView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C3295251B38FF7A00A020CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C32951F1B38FF7A00A020CB = {
+			isa = PBXGroup;
+			children = (
+				9C32952A1B38FF7A00A020CB /* ChessChinese */,
+				9C3295291B38FF7A00A020CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C3295291B38FF7A00A020CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C3295281B38FF7A00A020CB /* ChessChinese.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C32952A1B38FF7A00A020CB /* ChessChinese */ = {
+			isa = PBXGroup;
+			children = (
+				9C32952B1B38FF7A00A020CB /* AppDelegate.swift */,
+				9C3295411B393DCE00A020CB /* SKChessView.swift */,
+				9C32952D1B38FF7A00A020CB /* ViewController.swift */,
+				9C32953D1B38FFC400A020CB /* SKChessBoard.swift */,
+				9C32953F1B390FB700A020CB /* SKChessManager.swift */,
+				9C3295431B3955F200A020CB /* SKCoverChessView.swift */,
+				9C497D0A1B3A9E4E00A2570B /* SKEmptyChessView.swift */,
+				9C32952F1B38FF7A00A020CB /* Main.storyboard */,
+				9C3295321B38FF7A00A020CB /* Assets.xcassets */,
+				9C3295341B38FF7A00A020CB /* LaunchScreen.storyboard */,
+				9C3295371B38FF7A00A020CB /* Info.plist */,
+			);
+			path = ChessChinese;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C3295271B38FF7A00A020CB /* ChessChinese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C32953A1B38FF7A00A020CB /* Build configuration list for PBXNativeTarget "ChessChinese" */;
+			buildPhases = (
+				9C3295241B38FF7A00A020CB /* Sources */,
+				9C3295251B38FF7A00A020CB /* Frameworks */,
+				9C3295261B38FF7A00A020CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChessChinese;
+			productName = ChessChinese;
+			productReference = 9C3295281B38FF7A00A020CB /* ChessChinese.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C3295201B38FF7A00A020CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = StevenKuo;
+				TargetAttributes = {
+					9C3295271B38FF7A00A020CB = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 9C3295231B38FF7A00A020CB /* Build configuration list for PBXProject "ChessChinese" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C32951F1B38FF7A00A020CB;
+			productRefGroup = 9C3295291B38FF7A00A020CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C3295271B38FF7A00A020CB /* ChessChinese */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C3295261B38FF7A00A020CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3295361B38FF7A00A020CB /* LaunchScreen.storyboard in Resources */,
+				9C3295331B38FF7A00A020CB /* Assets.xcassets in Resources */,
+				9C3295311B38FF7A00A020CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C3295241B38FF7A00A020CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C32952E1B38FF7A00A020CB /* ViewController.swift in Sources */,
+				9C3295441B3955F200A020CB /* SKCoverChessView.swift in Sources */,
+				9C32952C1B38FF7A00A020CB /* AppDelegate.swift in Sources */,
+				9C497D0B1B3A9E4E00A2570B /* SKEmptyChessView.swift in Sources */,
+				9C3295401B390FB700A020CB /* SKChessManager.swift in Sources */,
+				9C32953E1B38FFC400A020CB /* SKChessBoard.swift in Sources */,
+				9C3295421B393DCE00A020CB /* SKChessView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C32952F1B38FF7A00A020CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C3295301B38FF7A00A020CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C3295341B38FF7A00A020CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C3295351B38FF7A00A020CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C3295381B38FF7A00A020CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C3295391B38FF7A00A020CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C32953B1B38FF7A00A020CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChessChinese/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SK.ChessChinese;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C32953C1B38FF7A00A020CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChessChinese/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SK.ChessChinese;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C3295231B38FF7A00A020CB /* Build configuration list for PBXProject "ChessChinese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C3295381B38FF7A00A020CB /* Debug */,
+				9C3295391B38FF7A00A020CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C32953A1B38FF7A00A020CB /* Build configuration list for PBXNativeTarget "ChessChinese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C32953B1B38FF7A00A020CB /* Debug */,
+				9C32953C1B38FF7A00A020CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C3295201B38FF7A00A020CB /* Project object */;
+}
