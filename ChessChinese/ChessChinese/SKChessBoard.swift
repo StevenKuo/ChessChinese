@@ -18,19 +18,19 @@ class SKChessBoard: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let verticalHeight: CGFloat = rect.size.height / 4.0
         let horizonWidth: CGFloat = rect.size.width / 8.0
-        let context: CGContextRef = UIGraphicsGetCurrentContext()!
+        let context: CGContext = UIGraphicsGetCurrentContext()!
         for index in 1...3 {
-            CGContextMoveToPoint(context, 0.0, verticalHeight * CGFloat(index))
-            CGContextAddLineToPoint(context, rect.size.width, verticalHeight * CGFloat(index))
+            context.move(to: CGPoint(x: 0.0, y: verticalHeight * CGFloat(index)))
+            context.addLine(to: CGPoint(x: rect.size.width, y: verticalHeight * CGFloat(index)))
         }
         for index in 1...7 {
-            CGContextMoveToPoint(context, horizonWidth * CGFloat(index), 0.0)
-            CGContextAddLineToPoint(context, horizonWidth * CGFloat(index), rect.size.height)
+            context.move(to: CGPoint(x: horizonWidth * CGFloat(index), y: 0.0))
+            context.addLine(to: CGPoint(x: horizonWidth * CGFloat(index), y: rect.size.height))
         }
-        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
-        CGContextStrokePath(context)
+        context.setStrokeColor(UIColor.black.cgColor)
+        context.strokePath()
     }
 }

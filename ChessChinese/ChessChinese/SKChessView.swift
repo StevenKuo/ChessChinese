@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 enum SKChessViewType {
-    case SKChessViewTypeRed
-    case SKChessViewTypeBlack
+    case skChessViewTypeRed
+    case skChessViewTypeBlack
 }
 
 protocol SKChessViewDelegate {
-    func didSelect(target: SKChessView)
+    func didSelect(_ target: SKChessView)
 }
 
 class SKChessView: UIView {
     
-    private var type: SKChessViewType?
+    fileprivate var type: SKChessViewType?
     var delegate: SKChessViewDelegate?
     var chessLabel: UILabel!
     var index = 0
@@ -30,19 +30,19 @@ class SKChessView: UIView {
         }
         set {
             type = newValue
-            if newValue == SKChessViewType.SKChessViewTypeBlack {
-                layer.borderColor = UIColor.blackColor().CGColor
-                chessLabel.textColor = UIColor.blackColor()
+            if newValue == SKChessViewType.skChessViewTypeBlack {
+                layer.borderColor = UIColor.black.cgColor
+                chessLabel.textColor = UIColor.black
             }
-            else if newValue == SKChessViewType.SKChessViewTypeRed {
-                layer.borderColor = UIColor.redColor().CGColor
-                chessLabel.textColor = UIColor.redColor()
+            else if newValue == SKChessViewType.skChessViewTypeRed {
+                layer.borderColor = UIColor.red.cgColor
+                chessLabel.textColor = UIColor.red
             }
         }
     }
     
     func select () {
-        layer.borderColor = UIColor.yellowColor().CGColor
+        layer.borderColor = UIColor.yellow.cgColor
     }
     
     func unSelect () {
@@ -51,19 +51,19 @@ class SKChessView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         layer.cornerRadius = frame.size.width / 2.0
         layer.borderWidth = 5.0
         
-        chessLabel = UILabel(frame: CGRectMake(0.0, 0.0, frame.size.width, frame.size.height))
-        chessLabel.backgroundColor = UIColor.clearColor()
-        chessLabel.font = UIFont.boldSystemFontOfSize(frame.size.width / 2.0)
-        chessLabel.textAlignment = NSTextAlignment.Center
+        chessLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: frame.size.width, height: frame.size.height))
+        chessLabel.backgroundColor = UIColor.clear
+        chessLabel.font = UIFont.boldSystemFont(ofSize: frame.size.width / 2.0)
+        chessLabel.textAlignment = NSTextAlignment.center
         addSubview(chessLabel)
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         guard delegate == nil else {
             delegate?.didSelect(self)
             return

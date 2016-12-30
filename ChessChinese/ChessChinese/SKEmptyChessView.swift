@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SKEmptyChessViewDelegate {
-    func moveToIndex(index: Int)
+    func moveToIndex(_ index: Int)
 }
 
 class SKEmptyChessView: UIView {
@@ -19,15 +19,15 @@ class SKEmptyChessView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
     }
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         guard let _ = delegate else {
             return
         }

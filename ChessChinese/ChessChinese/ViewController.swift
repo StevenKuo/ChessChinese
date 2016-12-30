@@ -10,21 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, SKChessViewDelegate, SKCoverChessViewDelegate, SKEmptyChessViewDelegate {
 
-    private let chessManager = SKChessManager()
-    private var startChess: SKChessView?
+    fileprivate let chessManager = SKChessManager()
+    fileprivate var startChess: SKChessView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let board = SKChessBoard(frame: CGRectMake(0.0, 0.0, view.frame.size.width, view.frame.size.height))
+        let board = SKChessBoard(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: view.frame.size.height))
         view.addSubview(board)
         resetChessView()
     }
     
-    func didOpen(index: Int) {
+    func didOpen(_ index: Int) {
         chessManager.openedIndex.append(index)
     }
     
-    func moveToIndex(index: Int) {
+    func moveToIndex(_ index: Int) {
         guard let _ = startChess else {
             return
         }
@@ -36,7 +36,7 @@ class ViewController: UIViewController, SKChessViewDelegate, SKCoverChessViewDel
         }
     }
 
-    func didSelect(target: SKChessView) {
+    func didSelect(_ target: SKChessView) {
         guard startChess == nil else {
             if startChess!.chessType != target.chessType && chessManager.permit(fristIndex: startChess!.index, secondIndex: target.index){
                 chessManager.updateChessScope(firstIndex: startChess!.index, secondIndex: target.index)
@@ -61,24 +61,24 @@ class ViewController: UIViewController, SKChessViewDelegate, SKCoverChessViewDel
             }
         }
         let chessSize = view.frame.size.width / 8.0 < view.frame.height / 4.0 ? view.frame.size.width / 8.0 : view.frame.size.height / 4.0
-        for (index, chess) in chessManager.chessScope.enumerate() {
+        for (index, chess) in chessManager.chessScope.enumerated() {
             let row = Int(index / 8)
             let colum = index % 8
             guard chess != nil else {
-                let emptyView = SKEmptyChessView(frame: CGRectMake(view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, chessSize, chessSize))
+                let emptyView = SKEmptyChessView(frame: CGRect(x: view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, y: view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, width: chessSize, height: chessSize))
                 emptyView.index = index
                 emptyView.delegate = self
                 view.addSubview(emptyView)
                 continue
             }
-            let chessView = SKChessView(frame: CGRectMake(view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, chessSize, chessSize))
+            let chessView = SKChessView(frame: CGRect(x: view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, y: view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, width: chessSize, height: chessSize))
             chessView.index = index
             chessView.delegate = self
             switch chess! {
             case "兵", "俥", "瑪", "炮", "帥", "仕", "相":
-                chessView.chessType = SKChessViewType.SKChessViewTypeRed
+                chessView.chessType = SKChessViewType.skChessViewTypeRed
             default :
-                chessView.chessType = SKChessViewType.SKChessViewTypeBlack
+                chessView.chessType = SKChessViewType.skChessViewTypeBlack
                 
             }
             chessView.chessLabel.text = chess
@@ -86,7 +86,7 @@ class ViewController: UIViewController, SKChessViewDelegate, SKCoverChessViewDel
             if chessManager.openedIndex.contains(index) {
                 continue
             }
-            let chessCoverView = SKCoverChessView(frame: CGRectMake(view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, chessSize, chessSize))
+            let chessCoverView = SKCoverChessView(frame: CGRect(x: view.frame.size.width / 8.0 * CGFloat(colum) + (view.frame.size.width / 8.0 - chessSize) / 2.0, y: view.frame.size.height / 4.0 * CGFloat(row) + (view.frame.size.height / 4.0 - chessSize) / 2.0, width: chessSize, height: chessSize))
             chessCoverView.index = index
             chessCoverView.delegate = self
             view.addSubview(chessCoverView)

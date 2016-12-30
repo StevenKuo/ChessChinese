@@ -9,21 +9,21 @@
 import Foundation
 
 class SKChessManager {
-    private(set) var chessScope = [String?](count: 32, repeatedValue: nil)
-    private var beatRule = (bin: ["將", "帥", "兵", "卒"], g: ["兵", "卒", "馬", "瑪", "炮", "包", "車", "俥"], ma: ["兵", "卒", "馬", "瑪", "炮", "包",], pao: ["兵", "俥", "瑪", "炮", "帥", "仕", "相", "卒", "車", "馬", "包", "將", "士", "象"], shawn: ["兵", "卒", "馬", "瑪", "炮", "包", "車", "俥", "相", "象"], shi: ["兵", "俥", "瑪", "炮", "仕", "相", "卒", "車", "馬", "包", "士", "象"], handsome: ["俥", "瑪", "炮", "帥", "仕", "相", "車", "馬", "包", "將", "士", "象"])
+    fileprivate(set) var chessScope = [String?](repeating: nil, count: 32)
+    fileprivate var beatRule = (bin: ["將", "帥", "兵", "卒"], g: ["兵", "卒", "馬", "瑪", "炮", "包", "車", "俥"], ma: ["兵", "卒", "馬", "瑪", "炮", "包",], pao: ["兵", "俥", "瑪", "炮", "帥", "仕", "相", "卒", "車", "馬", "包", "將", "士", "象"], shawn: ["兵", "卒", "馬", "瑪", "炮", "包", "車", "俥", "相", "象"], shi: ["兵", "俥", "瑪", "炮", "仕", "相", "卒", "車", "馬", "包", "士", "象"], handsome: ["俥", "瑪", "炮", "帥", "仕", "相", "車", "馬", "包", "將", "士", "象"])
     var openedIndex = [Int]()
     init () {
         _initChessScope()
     }
-    private func _initChessScope () {
+    fileprivate func _initChessScope () {
         chessScope.removeAll()
         
         var chessSet = ["兵", "兵", "兵", "兵", "兵", "俥", "俥", "瑪", "瑪", "炮", "炮", "帥", "仕", "仕", "相", "相","卒", "卒", "卒", "卒", "卒", "車", "車", "馬", "馬", "包", "包", "將", "士", "士", "象", "象"]
         while (chessSet.count > 0) {
             let randomNum = Int(arc4random_uniform(UInt32(chessSet.count)))
-            let randomIndex = chessSet.startIndex.advancedBy(randomNum);
+            let randomIndex = chessSet.startIndex.advanced(by: randomNum);
             chessScope.append(chessSet[randomIndex])
-            chessSet.removeAtIndex(randomIndex)
+            chessSet.remove(at: randomIndex)
         }
     }
     func updateChessScope (firstIndex from: Int, secondIndex to: Int) {
@@ -110,7 +110,7 @@ class SKChessManager {
             let temp = topIndexList
             for index in temp {
                 if index < to {
-                    topIndexList.removeAtIndex(topIndexList.indexOf(index)!)
+                    topIndexList.remove(at: topIndexList.index(of: index)!)
                 }
             }
             var findchess = false
@@ -131,7 +131,7 @@ class SKChessManager {
             let temp = bottomIndexList
             for index in temp {
                 if index > to {
-                    bottomIndexList.removeAtIndex(bottomIndexList.indexOf(index)!)
+                    bottomIndexList.remove(at: bottomIndexList.index(of: index)!)
                 }
             }
             var findchess = false
@@ -152,7 +152,7 @@ class SKChessManager {
             let temp = leftIndexList
             for index in temp {
                 if index < to {
-                    leftIndexList.removeAtIndex(leftIndexList.indexOf(index)!)
+                    leftIndexList.remove(at: leftIndexList.index(of: index)!)
                 }
             }
             var findchess = false
@@ -173,7 +173,7 @@ class SKChessManager {
             let temp = rightIndexList
             for index in temp {
                 if index > to {
-                    rightIndexList.removeAtIndex(rightIndexList.indexOf(index)!)
+                    rightIndexList.remove(at: rightIndexList.index(of: index)!)
                 }
             }
             var findchess = false
